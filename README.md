@@ -2,9 +2,18 @@
 
 ShipTrack is a production-style e-commerce logistics application built to showcase modern full-stack skills: Next.js 16 App Router, MongoDB/Mongoose, NextAuth credentials auth, Stripe Checkout + webhooks, BullMQ + Redis background jobs, and a futuristic UI built with Tailwind.
 
+## Public Showcase Notice
+
+This repository is a curated public showcase of a private codebase. It focuses on architecture, product flows, and implementation depth while keeping private infrastructure and operational details out of scope.
+
 ## Live Demo
 
-- Demo: <ADD-LIVE-DEMO-URL>
+- Demo: <https://www.loom.com/share/c5a0fe261d414bfdac28cb32de055100>
+
+Quick tour:
+
+- Browse catalog → add to cart → checkout → order history
+- Admin: manage products/orders and review analytics
 
 ## Features
 
@@ -15,6 +24,12 @@ ShipTrack is a production-style e-commerce logistics application built to showca
 - BullMQ queue worker for emails + automated fulfillment
 - Vercel cron fallback to fulfill paid orders without a worker
 
+## Why This Project
+
+- Demonstrate end-to-end commerce flows (catalog → checkout → fulfillment)
+- Show real-world operational patterns (webhooks, queues, cron fallbacks)
+- Highlight security and access control for admin vs customer
+
 ## Tech Stack
 
 - Next.js 16 (App Router)
@@ -22,6 +37,7 @@ ShipTrack is a production-style e-commerce logistics application built to showca
 - NextAuth.js (Credentials provider)
 - Stripe Checkout + Webhooks
 - BullMQ + Redis
+- Vercel Cron
 - Tailwind CSS + TanStack Query
 
 ## Project Structure
@@ -40,6 +56,8 @@ apps/web/
 ```
 
 ## Setup
+
+Requirements: Node 18+
 
 1. Install dependencies
 
@@ -85,6 +103,8 @@ STRIPE_DISABLED=false
 REDIS_URL=
 ```
 
+Security note: demo credentials are for local development only. Do not use real production secrets in this public repo.
+
 ## Deployment (Vercel)
 
 ShipTrack is configured for Vercel-only deployment. BullMQ workers cannot run on serverless functions, so there are two fulfillment paths:
@@ -121,6 +141,12 @@ Add screenshots under `apps/web/public/screenshots/` and reference them here:
 - `apps/web/public/screenshots/admin-orders.png` — Admin Orders
 
 Replace filenames or add more as needed.
+
+## Limitations / Intentional Simplifications
+
+- Single-tenant setup (no multi-tenant orgs)
+- Simplified fulfillment flow without external carrier integrations
+- Payments focused on Stripe Checkout (no multi-processor abstraction)
 
 ## Architecture Diagram
 
@@ -181,3 +207,7 @@ ShipTrack uses the Next.js App Router with server components for data-heavy page
 ### Stripe unavailable?
 
 If Stripe signup is not available in your country, set `STRIPE_DISABLED=true` in `apps/web/.env.local`. Checkout will run in demo mode and automatically mark orders as paid.
+
+## License
+
+All rights reserved. See `LICENSE`.
