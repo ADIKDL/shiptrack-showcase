@@ -134,14 +134,17 @@ After seeding:
 
 ## Screenshots
 
-Add screenshots under `apps/web/public/screenshots/` and reference them here:
+### Home / Mission Control
 
-- ![Home](apps/web/public/screenshots/home.png)
-- ![Catalog](apps/web/public/screenshots/catalog.png)
-- ![Admin Orders](apps/web/public/screenshots/admin-orders.png)
-- `apps/web/public/screenshots/home.png` — Home / Mission Control
-- `apps/web/public/screenshots/catalog.png` — Product Catalog
-- `apps/web/public/screenshots/admin-orders.png` — Admin Orders
+![Home](apps/web/public/screenshots/home.png)
+
+### Product Catalog
+
+![Catalog](apps/web/public/screenshots/catalog.png)
+
+### Admin Orders
+
+![Admin Orders](apps/web/public/screenshots/admin-orders.png)
 
 Replace filenames or add more as needed.
 
