@@ -8,7 +8,7 @@ This repository is a curated public showcase of a private codebase. It focuses o
 
 ## Live Demo
 
-- Demo: <https://www.loom.com/share/c5a0fe261d414bfdac28cb32de055100>
+- Demo: <https://www.loom.com/share/6a6ef3df501043bbb523211d20daa583>
 
 Quick tour:
 
@@ -136,6 +136,9 @@ After seeding:
 
 Add screenshots under `apps/web/public/screenshots/` and reference them here:
 
+- ![Home](apps/web/public/screenshots/home.png)
+- ![Catalog](apps/web/public/screenshots/catalog.png)
+- ![Admin Orders](apps/web/public/screenshots/admin-orders.png)
 - `apps/web/public/screenshots/home.png` — Home / Mission Control
 - `apps/web/public/screenshots/catalog.png` — Product Catalog
 - `apps/web/public/screenshots/admin-orders.png` — Admin Orders
